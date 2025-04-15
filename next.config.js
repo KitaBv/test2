@@ -4,7 +4,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: '/warpoint-partners',
+  basePath: process.env.NODE_ENV === 'production' ? '/test2' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/test2/' : '',
 }
 
 module.exports = nextConfig 
